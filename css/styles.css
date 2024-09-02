@@ -65,14 +65,24 @@ button {
 
 }
 
-.tasks-list{
+.tasks-list {
     list-style: none;
     display: flex;
-    gap:50px;
-    background-color: #cfcfcf;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    flex: 1;
+    padding: 10px;
+}
 
+.task-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #cfcfcf;
+    border-radius: 5px;
 }
 
 .task p {
@@ -94,22 +104,23 @@ button {
     display: flex;
     align-items: center;
     gap: 8px;
-    gap:650px;
-}
-.count-made{
-color: rgb(197, 87, 96);
-padding: 10px;
-background-color: rgb(238, 199, 202);
-border-radius: 30px;
-width: 30px;
-height:30px;
-display: flex;
-justify-content: center;
-align-items: center;
+    gap: 650px;
 }
 
-.count-done{
-color: rgb(16, 68, 11);
+.count-made {
+    color: rgb(197, 87, 96);
+    padding: 10px;
+    background-color: rgb(238, 199, 202);
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-done {
+    color: rgb(16, 68, 11);
     padding: 10px;
     background-color: rgb(146, 238, 138);
     border-radius: 30px;
@@ -119,45 +130,3 @@ color: rgb(16, 68, 11);
     justify-content: center;
     align-items: center;
 }
-
-input[type="checkbox"] {
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    outline: none;
-    font: inherit;
-    color: currentColor;
-    width: 20px;
-    height: 20px;
-    border: 1px dashed #6f3cc3;
-    border-radius: 10em;
-    transform: translateY(-0.075em);
-    display: grid;
-    place-content: center;
-}
-
-input[type="checkbox"]::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-    transform: scale(0);
-    transform-origin: bottom left;
-    transition: 120ms transform ease-in-out;
-    background-color: #fff;
-}
-
-input[type="checkbox"]:checked {
-    background-color: #84cc16;
-    border-color: #84cc16;
-}
-
-input[type="checkbox"]:checked::before {
-    transform: scale(1);
-}
-
-input[type="checkbox"]:disabled {
-    cursor: not-allowed;
-}
-
-
